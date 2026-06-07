@@ -37,14 +37,11 @@
                 class="md:flex justify-between items-center bg-white p-5 rounded-xl shadow-sm border border-gray-100 space-y-2 md:space-y-0">
                 <div>
                     <h1 class="font-bold text-2xl text-gray-800 flex items-center gap-2">
-                        <i class="fas fa-tags text-red-500"></i> Master Ingridient
+                        <i class="fa-solid fa-receipt text-purple-500 text-4xl"></i> Master Ingridient
                     </h1>
                     <p class="text-sm text-gray-500 mt-1">Organize and manage your master ingredients</p>
                 </div>
-                <button id="addBtn"
-                    class="px-6 py-3 bg-red-500 text-white rounded-lg shadow-md hover:bg-red-600 hover:scale-105 transition font-bold flex items-center gap-2 text-sm">
-                    <i class="fas fa-plus"></i> Add
-                </button>
+                <x-button id="addBtn" size="lg" variant="purple" icon="plus">Add</x-button>
             </div>
 
             @if ($invents->isEmpty())
@@ -53,15 +50,15 @@
                     <div class="p-12 text-center">
                         <div class="flex flex-col items-center justify-center opacity-70">
                             <div
-                                class="w-20 h-20 bg-red-50 rounded-full flex items-center justify-center mb-4 border border-red-100">
-                                <i class="fas fa-inbox text-4xl text-red-300"></i>
+                                class="w-20 h-20 bg-purple-50 rounded-full flex items-center justify-center mb-4 border border-purple-100">
+                                <i class="fas fa-inbox text-4xl text-purple-300"></i>
                             </div>
                             <h3 class="text-lg font-bold text-gray-900">No master ingredients yet</h3>
                             <p class="text-sm text-gray-500 mt-1 mb-6">Get started by creating your first master
                                 ingredient.</p>
                             <button id="emptyAddBtn"
-                                class="px-6 py-2.5 bg-red-500 text-white rounded-lg shadow-md hover:bg-red-600 hover:scale-105 transition font-bold flex items-center gap-2 text-sm">
-                                <i class="fas fa-plus"></i> Create Master
+                                class="px-6 py-3 bg-purple-500 text-white rounded-lg shadow-md hover:bg-purple-600 hover:scale-105 transition font-bold flex items-center gap-2 text-sm">
+                                <i class="fas fa-plus"></i> Add Master
                             </button>
                         </div>
                     </div>

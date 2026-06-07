@@ -37,7 +37,7 @@
                 class="md:flex justify-between items-center bg-white p-5 rounded-xl shadow-sm border border-gray-100 space-y-2 md:space-y-0">
                 <div>
                     <h1 class="font-bold text-2xl text-gray-800 flex items-center gap-2">
-                        <i class="fas fa-tags text-red-500"></i> History
+                        <i class="fa-solid fa-arrow-rotate-left text-gray-600 text-4xl"></i> History
                     </h1>
                     <p class="text-sm text-gray-500 mt-1">View your archived order history</p>
                 </div>

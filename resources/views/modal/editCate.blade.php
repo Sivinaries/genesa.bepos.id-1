@@ -7,7 +7,7 @@
         </button>
 
         <h2 id="editModalTitle" class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-2">
-            <i class="fas fa-edit text-blue-600"></i> Edit Category
+            <i class="fa-solid fa-table-list text-blue-500 text-4xl"></i> Edit Category
         </h2>
 
         <form id="editForm" method="post" enctype="multipart/form-data" class="space-y-5" novalidate>

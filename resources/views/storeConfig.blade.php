@@ -19,7 +19,7 @@
             <div class="flex justify-between items-center bg-white p-5 rounded-xl shadow-sm border border-gray-100">
                 <div>
                     <h1 class="font-bold text-2xl text-gray-800 flex items-center gap-2">
-                        <i class="fas fa-cogs text-slate-600"></i> Store Configuration
+                        <i class="fas fa-cogs text-slate-600 text-4xl"></i> Store Configuration
                     </h1>
                     <p class="text-sm text-gray-500 mt-1">Global settings for store operations</p>
                 </div>

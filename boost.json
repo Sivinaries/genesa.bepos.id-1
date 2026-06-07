@@ -1,0 +1,20 @@
+{
+    "agents": [
+        "copilot"
+    ],
+    "cloud": false,
+    "guidelines": true,
+    "mcp": true,
+    "nightwatch": false,
+    "packages": [
+        "prism-php/prism",
+        "realrashid/sweet-alert"
+    ],
+    "sail": false,
+    "skills": [
+        "laravel-best-practices",
+        "tailwindcss-development",
+        "developing-with-prism",
+        "sweet-alert-development"
+    ]
+}

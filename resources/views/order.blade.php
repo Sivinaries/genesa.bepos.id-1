@@ -37,13 +37,13 @@
                 class="md:flex justify-between items-center bg-white p-5 rounded-xl shadow-sm border border-gray-100 space-y-2 md:space-y-0">
                 <div>
                     <h1 class="font-bold text-2xl text-gray-800 flex items-center gap-2">
-                        <i class="fas fa-receipt text-blue-500"></i> Orders
+                        <i class="fas fa-receipt text-blue-500 text-4xl"></i> Orders
                     </h1>
                     <p class="text-sm text-gray-500 mt-1">Manage your active orders</p>
                 </div>
                 <a href="{{ route('addorder') }}"
-                    class="px-6 py-3 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 hover:scale-105 transition font-bold flex items-center gap-2 text-sm">
-                    <i class="fas fa-plus"></i> Add Order
+                    class="px-10 py-3 text-base bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 transition font-bold flex items-center gap-2">
+                    <i class="fas fa-plus"></i> Add 
                 </a>
             </div>
 
@@ -154,8 +154,8 @@
                             <p class="text-sm text-gray-500 mt-1 mb-6">Create a new order to start serving customers.
                             </p>
                             <a href="{{ route('addorder') }}"
-                                class="px-6 py-2.5 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 hover:scale-105 transition font-bold flex items-center gap-2 text-sm">
-                                <i class="fas fa-plus"></i> Create Order
+                                class="px-6 py-3 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 hover:scale-105 transition font-bold flex items-center gap-2 text-sm">
+                                <i class="fas fa-plus"></i> Add Order
                             </a>
                         </div>
                     </div>

@@ -8,7 +8,7 @@
         </button>
 
         <h2 id="addModalTitle" class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-2">
-            <i class="fas fa-tags text-red-500"></i> Add Category
+            <i class="fa-solid fa-table-list text-blue-500 text-4xl"></i> Add Category
         </h2>
         
         <form id="addForm" method="post" action="{{ route('postcategory') }}" enctype="multipart/form-data"
@@ -41,7 +41,7 @@
             </div>
 
             <button type="submit"
-                class="w-full py-3 bg-red-500 text-white font-bold rounded-lg shadow-md hover:bg-red-600 active:scale-95 transition flex justify-center items-center gap-2 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2">
+                class="w-full py-3 bg-blue-500 text-white font-bold rounded-lg shadow-md hover:bg-blue-600 active:scale-95 transition flex justify-center items-center gap-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
                 <i class="fas fa-check"></i> Save Category
             </button>
         </form>

@@ -37,15 +37,13 @@
                 class="md:flex justify-between items-center bg-white p-5 rounded-xl shadow-sm border border-gray-100 space-y-2 md:space-y-0">
                 <div>
                     <h1 class="font-bold text-2xl text-gray-800 flex items-center gap-2">
-                        <i class="fas fa-tags text-red-500"></i> Category Management
+                        <i class="fa-solid fa-table-list text-blue-500 text-4xl"></i>Category Management
                     </h1>
                     <p class="text-sm text-gray-500 mt-1">Organize and manage your menu categories</p>
                 </div>
 
-                <button id="addBtn"
-                    class="px-6 py-3 bg-red-500 text-white rounded-lg shadow-md hover:bg-red-600 hover:scale-105 transition font-bold flex items-center gap-2 text-sm">
-                    <i class="fas fa-plus"></i> Add
-                </button>
+                <x-button id="addBtn" size="lg" variant="blue" icon="plus">Add</x-button>
+
             </div>
 
             @if ($category->isEmpty())
@@ -54,14 +52,14 @@
                     <div class="p-12 text-center">
                         <div class="flex flex-col items-center justify-center opacity-70">
                             <div
-                                class="w-20 h-20 bg-red-50 rounded-full flex items-center justify-center mb-4 border border-red-100">
-                                <i class="fas fa-inbox text-4xl text-red-300"></i>
+                                class="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center mb-4 border border-blue-100">
+                                <i class="fas fa-inbox text-4xl text-blue-300"></i>
                             </div>
                             <h3 class="text-lg font-bold text-gray-900">No categories yet</h3>
                             <p class="text-sm text-gray-500 mt-1 mb-6">Get started by creating your first category.</p>
                             <button id="emptyAddBtn"
-                                class="px-6 py-2.5 bg-red-500 text-white rounded-lg shadow-md hover:bg-red-600 hover:scale-105 transition font-bold flex items-center gap-2 text-sm">
-                                <i class="fas fa-plus"></i> Create Category
+                                class="px-6 py-3 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 hover:scale-105 transition font-bold flex items-center gap-2 text-sm">
+                                <i class="fas fa-plus"></i> Add Category
                             </button>
                         </div>
                     </div>
@@ -75,9 +73,6 @@
                                 <tr>
                                     <th class="p-4 font-bold rounded-tl-lg" width="5%">
                                         <div class="flex items-center justify-center">No</div>
-                                    </th>
-                                    <th class="p-4 font-bold" width="20%">
-                                        <div class="flex items-center justify-center">Created At</div>
                                     </th>
                                     <th class="p-4 font-bold">Name</th>
                                     <th class="p-4 font-bold">Description</th>
@@ -93,18 +88,15 @@
                                     <tr class="hover:bg-gray-50 transition duration-150">
                                         <td class="p-4 font-medium text-center">{{ $no++ }}</td>
 
-                                        <td class="p-4 text-center">
-                                            <span
-                                                class="inline-flex items-center bg-gray-50 text-gray-700 text-xs font-bold px-2 py-1 rounded border border-gray-200">
-                                                <i class="far fa-calendar mr-1 text-gray-400"></i>
-                                                {{ $item->created_at->format('d M Y') }}
-                                            </span>
+                                        <td class="p-4 space-y-1">
+                                            <div class="font-bold text-gray-900 text-base group-hover:text-cyan-600">
+                                                {{ $item->name }}
+                                            </div>
+                                            <div class="text-xs text-gray-400">Created:
+                                                {{ $item->created_at ? $item->created_at->format('Y-m-d') : '-' }}
+                                            </div>
                                         </td>
-
-                                        <td class="p-4">
-                                            <div class="font-bold text-gray-900 text-base">{{ $item->name }}</div>
-                                        </td>
-
+                                        
                                         <td class="p-4">
                                             <span class="text-gray-600 line-clamp-2">
                                                 {{ $item->desc }}
@@ -120,8 +112,7 @@
                                                     <i class="fas fa-edit text-lg"></i>
                                                 </button>
 
-                                                <form method="post"
-                                                    action="{{ route('delcategory', ['id' => $item->id]) }}"
+                                                <form method="post" action="{{ route('delcategory', ['id' => $item->id]) }}"
                                                     class="inline deleteForm">
                                                     @csrf
                                                     @method('delete')

@@ -22,7 +22,7 @@
             <div class="md:flex justify-between items-center bg-white p-5 rounded-xl shadow-sm border border-gray-100 space-y-2 md:space-y-0">
                 <div>
                     <h1 class="font-bold text-2xl text-gray-800 flex items-center gap-2">
-                        <i class="fa-solid fa-user-gear text-slate-600"></i> Profile Settings
+                        <i class="fa-solid fa-user-gear text-slate-600 text-4xl"></i> Profile Settings
                     </h1>
                     <p class="text-sm text-gray-500 mt-1">Manage your personal profile and store information</p>
                 </div>
