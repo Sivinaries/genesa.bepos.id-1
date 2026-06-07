@@ -23,7 +23,7 @@ class ProductController extends Controller
 
         $cacheKey = "menu_{$userStore->id}";
 
-        $category = Category::where('store_id', $userStore->id)->get();
+        $category = Category::query()->where('store_id', $userStore->id)->get();
 
         $menuAll = Cache::remember($cacheKey, 180, function () use ($userStore) {
             return Menu::query()

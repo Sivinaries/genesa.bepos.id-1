@@ -73,9 +73,6 @@
                                     <th class="p-4 font-bold rounded-tl-lg" width="5%">
                                         <div class="flex items-center justify-center">No</div>
                                     </th>
-                                    <th class="p-4 font-bold" width="20%">
-                                        <div class="flex items-center justify-center">Created At</div>
-                                    </th>
                                     <th class="p-4 font-bold">Name</th>
                                     <th class="p-4 font-bold">Min Stock</th>
                                     <th class="p-4 font-bold">Unit</th>
@@ -90,16 +87,13 @@
                                     <tr class="hover:bg-gray-50 transition duration-150">
                                         <td class="p-4 font-medium text-center">{{ $no++ }}</td>
 
-                                        <td class="p-4 text-center">
-                                            <span
-                                                class="inline-flex items-center bg-gray-50 text-gray-700 text-xs font-bold px-2 py-1 rounded border border-gray-200">
-                                                <i class="far fa-calendar mr-1 text-gray-400"></i>
-                                                {{ \Carbon\Carbon::parse($item->created_at)->format('d M Y') }}
-                                            </span>
-                                        </td>
-
-                                        <td class="p-4">
-                                            <div class="font-bold text-gray-900 text-base">{{ $item->name }}</div>
+                                         <td class="p-4 space-y-1">
+                                            <div class="font-bold text-gray-900 text-base group-hover:text-cyan-600">
+                                                {{ $item->name }}
+                                            </div>
+                                            <div class="text-xs text-gray-400">Created:
+                                                {{ $item->created_at ? $item->created_at->format('Y-m-d') : '-' }}
+                                            </div>
                                         </td>
 
                                         <td class="p-4">

@@ -46,7 +46,7 @@
                         class="px-6 py-3 text-base bg-yellow-500 text-white rounded-lg shadow-md hover:bg-yellow-600 transition font-bold flex items-center gap-2">
                         <i class="fa fa-wrench"></i> Set Ingridients
                     </a>
-                     <x-button id="addBtn" size="lg" variant="green" icon="plus">Add</x-button>
+                    <x-button id="addBtn" size="lg" variant="green" icon="plus">Add</x-button>
                 </div>
             </div>
 
@@ -92,9 +92,6 @@
                                             <th class="p-4 font-bold rounded-tl-lg" width="5%">
                                                 <div class="flex items-center justify-center">No</div>
                                             </th>
-                                            <th class="p-4 font-bold" width="20%">
-                                                <div class="flex items-center justify-center">Created At</div>
-                                            </th>
                                             <th class="p-4 font-bold">Name</th>
                                             <th class="p-4 font-bold">Price</th>
                                             <th class="p-4 font-bold rounded-tr-lg" width="15%">
@@ -108,16 +105,12 @@
                                             <tr class="hover:bg-gray-50 transition duration-150">
                                                 <td class="p-4 font-medium text-center">{{ $no++ }}</td>
 
-                                                <td class="p-4 text-center">
-                                                    <span
-                                                        class="inline-flex items-center bg-gray-50 text-gray-700 text-xs font-bold px-2 py-1 rounded border border-gray-200">
-                                                        <i class="far fa-calendar mr-1 text-gray-400"></i>
-                                                        {{ \Carbon\Carbon::parse($menu->created_at)->format('d M Y') }}
-                                                    </span>
-                                                </td>
-
-                                                <td class="p-4">
-                                                    <div class="font-bold text-gray-900 text-base">{{ $menu->name }}
+                                                <td class="p-4 space-y-2">
+                                                    <div class="font-bold text-gray-900 text-base group-hover:text-cyan-600">
+                                                        {{ $menu->name }}
+                                                    </div>
+                                                    <div class="text-xs text-gray-400">Created:
+                                                        {{ $menu->created_at ? $menu->created_at->format('Y-m-d') : '-' }}
                                                     </div>
                                                     @if ($menu->has_variety && !empty($menu->varieties))
                                                         <span
@@ -144,13 +137,11 @@
                                                             data-category_id="{{ $menu->category_id }}"
                                                             data-desc="{{ $menu->description }}"
                                                             data-has_variety="{{ $menu->has_variety ? 1 : 0 }}"
-                                                            data-varieties='@json($menu->varieties ?? [])'
-                                                            title="Edit">
+                                                            data-varieties='@json($menu->varieties ?? [])' title="Edit">
                                                             <i class="fas fa-edit text-lg"></i>
                                                         </button>
 
-                                                        <form method="post"
-                                                            action="{{ route('delproduct', ['id' => $menu->id]) }}"
+                                                        <form method="post" action="{{ route('delproduct', ['id' => $menu->id]) }}"
                                                             class="inline deleteForm">
                                                             @csrf
                                                             @method('delete')

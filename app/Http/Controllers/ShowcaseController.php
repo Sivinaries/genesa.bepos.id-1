@@ -34,18 +34,13 @@ class ShowcaseController extends Controller
             'img' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
-        if ($request->hasFile('img')) {
-            $uploadedImage = $request->file('img');
-            $imageName = $uploadedImage->getClientOriginalName();
-            $uploadedImage->storeAs('public/img', $imageName);
-            $data['img'] = 'img/' . $imageName;
-        }
-
-        $data['store_id'] = $userStore->id;
+        $uploadedImage = $request->file('img');
+        $imageName = $uploadedImage->getClientOriginalName();
+        $uploadedImage->storeAs('img', $imageName, 'public');
 
         $showcase = Showcase::create([
             'name' => $data['name'],
-            'img' => $data['img'],
+            'img' => 'img/' . $imageName,
             'store_id' => $userStore->id,
         ]);
 
@@ -73,18 +68,15 @@ class ShowcaseController extends Controller
             ->where('store_id', $userStore->id)
             ->firstOrFail();
 
-        if ($request->hasFile('img')) {
-            $uploadedImage = $request->file('img');
-            $imageName = $uploadedImage->getClientOriginalName();
-            $uploadedImage->storeAs('public/img', $imageName);
-            $data['img'] = 'img/' . $imageName;
-        }
+        $uploadedImage = $request->file('img');
+        $imageName = $uploadedImage->getClientOriginalName();
+        $uploadedImage->storeAs('img', $imageName, 'public');
 
         $oldName = $showcase->name;
 
         $showcase->update([
             'name' => $data['name'],
-            'img' => $data['img'] ?? $showcase->img,
+            'img' => 'img/' . $imageName,
         ]);
 
         $this->logActivity(
