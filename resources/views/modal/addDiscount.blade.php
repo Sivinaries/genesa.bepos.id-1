@@ -6,7 +6,7 @@
             <i class="fas fa-times text-xl"></i>
         </button>
         <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-2">
-            <i class="fas fa-tags text-red-500"></i> Add Discount
+            <i class="fa-solid fa-percent text-purple-600 text-4xl"></i> Add Discount
         </h2>
 
         <form id="addForm" method="post" action="{{ route('postdiscount') }}" class="space-y-5">
@@ -15,20 +15,20 @@
             <div>
                 <label class="block text-sm font-semibold text-gray-700 mb-1">Name <span class="text-red-500">*</span></label>
                 <input type="text" name="name"
-                    class="w-full rounded-lg border-gray-300 shadow-sm p-2.5 border focus:ring-2 focus:ring-yellow-500"
+                    class="w-full rounded-lg border-gray-300 shadow-sm p-2.5 border focus:ring-2 focus:ring-purple-500"
                     required>
             </div>
 
             <div>
                 <label class="block text-sm font-semibold text-gray-700 mb-1">Percentage <span class="text-red-500">*</span></label>
                 <input type="number" name="percentage"
-                    class="w-full rounded-lg border-gray-300 shadow-sm p-2.5 border focus:ring-2 focus:ring-yellow-500"
+                    class="w-full rounded-lg border-gray-300 shadow-sm p-2.5 border focus:ring-2 focus:ring-purple-500"
                     required>
             </div>
 
             <button type="submit"
-                class="w-full py-3 bg-red-500 text-white font-bold rounded-lg shadow-md hover:bg-yellow-600 transition flex justify-center items-center gap-2">
-                <i class="fas fa-check"></i> Save
+                class="w-full py-3 bg-purple-500 text-white font-bold rounded-lg shadow-md hover:bg-purple-600 transition flex justify-center items-center gap-2">
+                <i class="fas fa-check"></i> Save Discount
             </button>
         </form>
     </div>

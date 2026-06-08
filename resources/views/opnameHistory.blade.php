@@ -35,17 +35,17 @@
             <div class="md:flex justify-between items-center bg-white p-5 rounded-xl shadow-sm border border-gray-100 space-y-2 md:space-y-0">
                 <div>
                     <h1 class="font-bold text-2xl text-gray-800 flex items-center gap-2">
-                        <i class="fas fa-history text-indigo-500"></i> Stock Opname History
+                        <i class="fas fa-history text-indigo-500 text-4xl"></i> Stock Opname History
                     </h1>
                     <p class="text-sm text-gray-500 mt-1">Audit trail of all stock opname sessions for comparison.</p>
                 </div>
                 <div class="flex gap-2">
                     <a href="{{ route('stock') }}"
-                        class="px-6 py-3 bg-gray-200 text-gray-800 rounded-lg shadow-sm hover:bg-gray-300 hover:scale-105 transition font-bold flex items-center gap-2 text-sm">
+                        class="px-6 py-3 bg-gray-200 text-base text-gray-800 rounded-lg shadow-sm hover:bg-gray-300 hover:scale-105 transition font-bold flex items-center gap-2">
                         <i class="fas fa-arrow-left"></i> Back to Stock
                     </a>
                     <a href="{{ route('opname') }}"
-                        class="px-6 py-3 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 hover:scale-105 transition font-bold flex items-center gap-2 text-sm">
+                        class="px-6 py-3 bg-blue-500 text-base text-white rounded-lg shadow-md hover:bg-blue-600 hover:scale-105 transition font-bold flex items-center gap-2">
                         <i class="fas fa-clipboard-check"></i> New Opname
                     </a>
                 </div>
@@ -64,13 +64,14 @@
                             <p class="text-sm text-gray-500 mt-1 mb-6">Run your first stock opname to start building an
                                 audit trail.</p>
                             <a href="{{ route('opname') }}"
-                                class="px-6 py-2.5 bg-indigo-500 text-white rounded-lg shadow-md hover:bg-indigo-600 hover:scale-105 transition font-bold flex items-center gap-2 text-sm">
+                                class="px-6 py-3 bg-indigo-500 text-sm text-white rounded-lg shadow-md hover:bg-indigo-600 hover:scale-105 transition font-bold flex items-center gap-2">
                                 <i class="fas fa-clipboard-check"></i> Start Opname
                             </a>
                         </div>
                     </div>
                 </div>
             @else
+            
                 <div class="space-y-6">
                     @foreach ($sessions as $session)
                         @php

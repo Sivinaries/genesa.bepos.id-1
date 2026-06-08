@@ -8,7 +8,7 @@
         </button>
 
         <h2 id="editModalTitle" class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-2">
-            <i class="fas fa-edit text-blue-600"></i> Edit Master
+            <i class="fa-solid fa-receipt text-purple-500 text-4xl"></i> Edit Master
         </h2>
         <p class="text-xs text-gray-500 mb-4">Untuk koreksi jumlah stok, gunakan menu <strong>Stok Bahan</strong>
             &rarr; Stock Opname.</p>
@@ -55,7 +55,7 @@
             </div>
 
             <button type="submit"
-                class="w-full py-3 bg-blue-600 text-white font-bold rounded-lg shadow-md hover:bg-blue-700 active:scale-95 transition flex justify-center items-center gap-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                class="w-full py-3 bg-purple-600 text-white font-bold rounded-lg shadow-md hover:bg-purple-700 active:scale-95 transition flex justify-center items-center gap-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
                 <i class="fas fa-save"></i> Update Master
             </button>
         </form>

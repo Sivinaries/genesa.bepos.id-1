@@ -154,7 +154,7 @@
                             <p class="text-sm text-gray-500 mt-1 mb-6">Create a new order to start serving customers.
                             </p>
                             <a href="{{ route('addorder') }}"
-                                class="px-6 py-3 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 hover:scale-105 transition font-bold flex items-center gap-2 text-sm">
+                                class="px-6 py-3 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 hover:scale-105 transition font-bold flex items-center gap-2 text-base">
                                 <i class="fas fa-plus"></i> Add Order
                             </a>
                         </div>

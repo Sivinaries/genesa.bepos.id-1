@@ -43,17 +43,17 @@
                 class="md:flex justify-between items-center bg-white p-5 rounded-xl shadow-sm border border-gray-100 space-y-2 md:space-y-0">
                 <div>
                     <h1 class="font-bold text-2xl text-gray-800 flex items-center gap-2">
-                        <i class="fas fa-clipboard-check text-blue-500"></i> Stock Opname
+                        <i class="fas fa-clipboard-check text-blue-500 text-4xl"></i> Stock Opname
                     </h1>
                     <p class="text-sm text-gray-500 mt-1">Reconcile system stock with physical count</p>
                 </div>
                 <div class="flex gap-2">
                     <a href="{{ route('opnameHistory') }}"
-                        class="px-6 py-3 bg-white border border-gray-300 text-gray-800 rounded-lg shadow-sm hover:bg-gray-50 hover:scale-105 transition font-bold flex items-center gap-2 text-sm">
+                        class="px-6 py-3 bg-white text-base border border-gray-300 text-gray-800 rounded-lg shadow-sm hover:bg-gray-50 transition font-bold flex items-center gap-2">
                         <i class="fas fa-history"></i> History
                     </a>
                     <a href="{{ route('stock') }}"
-                        class="px-6 py-3 bg-gray-200 text-gray-800 rounded-lg shadow-sm hover:bg-gray-300 hover:scale-105 transition font-bold flex items-center gap-2 text-sm">
+                        class="px-6 py-3 bg-gray-200 text-base text-gray-800 rounded-lg shadow-sm hover:bg-gray-300 transition font-bold flex items-center gap-2">
                         <i class="fas fa-arrow-left"></i> Back
                     </a>
                 </div>
@@ -72,7 +72,7 @@
                             <p class="text-sm text-gray-500 mt-1 mb-6">Add an ingredient first via <strong>Master
                                     Ingredient</strong> before doing a stock opname.</p>
                             <a href="{{ route('invent') }}"
-                                class="px-6 py-2.5 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 hover:scale-105 transition font-bold flex items-center gap-2 text-sm">
+                                class="px-6 py-3 bg-blue-500 text-base text-white rounded-lg shadow-md hover:bg-blue-600 hover:scale-105 transition font-bold flex items-center gap-2">
                                 <i class="fas fa-plus"></i> Add Ingredient
                             </a>
                         </div>
@@ -182,11 +182,11 @@
                         </p>
                         <div class="flex gap-2 w-full md:w-auto">
                             <a href="{{ route('stock') }}"
-                                class="px-6 py-3 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition font-bold flex-1 md:flex-none text-center text-sm">
+                                class="px-6 py-3 bg-gray-200 text-base text-gray-800 rounded-lg hover:bg-gray-300 transition font-bold flex-1 md:flex-none text-center">
                                 Cancel
                             </a>
                             <button type="submit" id="submitBtn"
-                                class="px-6 py-3 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 hover:scale-105 transition font-bold flex items-center gap-2 justify-center flex-1 md:flex-none text-sm disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                                class="px-6 py-3 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 hover:scale-105 transition font-bold flex items-center gap-2 justify-center flex-1 md:flex-none text-base disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                                 disabled>
                                 <i class="fas fa-check"></i> Save Opname
                             </button>

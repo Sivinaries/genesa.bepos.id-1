@@ -57,7 +57,7 @@
                             <h3 class="text-lg font-bold text-gray-900">No discounts yet</h3>
                             <p class="text-sm text-gray-500 mt-1 mb-6">Get started by creating your first discount.</p>
                             <button id="emptyAddBtn"
-                                class="px-6 py-3 bg-purple-500 text-white rounded-lg shadow-md hover:bg-purple-600 hover:scale-105 transition font-bold flex items-center gap-2 text-sm">
+                                class="px-6 py-3 bg-purple-500 text-white rounded-lg shadow-md hover:bg-purple-600 hover:scale-105 transition font-bold flex items-center gap-2 text-base">
                                 <i class="fas fa-plus"></i> Add Discount
                             </button>
                         </div>

@@ -62,7 +62,7 @@
                             <h3 class="text-lg font-bold text-gray-900">No products available</h3>
                             <p class="text-sm text-gray-500 mt-1 mb-6">Add products to start managing your catalog.</p>
                             <button id="emptyAddBtn"
-                                class="px-6 py-3 bg-green-500 text-white rounded-lg shadow-md hover:bg-green-600 hover:scale-105 transition font-bold flex items-center gap-2 text-sm">
+                                class="px-6 py-3 bg-green-500 text-white rounded-lg shadow-md hover:bg-green-600 hover:scale-105 transition font-bold flex items-center gap-2 text-base">
                                 <i class="fas fa-plus"></i> Add Product
                             </button>
                         </div>

@@ -76,7 +76,7 @@
                             <p class="text-sm text-gray-500 mt-1 mb-6">Add an ingredient first via <strong>Master
                                     Ingredient</strong> to track its stock here.</p>
                             <a href="{{ route('invent') }}"
-                                class="px-6 py-3 bg-yellow-500 text-white rounded-lg shadow-md hover:bg-yellow-600 hover:scale-105 transition font-bold flex items-center gap-2 text-sm">
+                                class="px-6 py-3 bg-yellow-500 text-white rounded-lg shadow-md hover:bg-yellow-600 hover:scale-105 transition font-bold flex items-center gap-2 text-base">
                                 <i class="fas fa-plus"></i> Add Ingredient
                             </a>
                         </div>
