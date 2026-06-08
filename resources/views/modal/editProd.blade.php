@@ -8,7 +8,7 @@
         </button>
 
         <h2 id="editModalTitle" class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-2">
-            <i class="fas fa-edit text-blue-600"></i> Edit Product
+            <i class="fa-solid fa-clipboard-list text-green-600 text-4xl"></i> Edit Product
         </h2>
 
         <form id="editForm" method="post" enctype="multipart/form-data" class="space-y-5" novalidate>
@@ -79,7 +79,7 @@
             </div>
 
             <button type="submit"
-                class="w-full py-3 bg-blue-600 text-white font-bold rounded-lg shadow-md hover:bg-blue-700 active:scale-95 transition flex justify-center items-center gap-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                class="w-full py-3 bg-green-600 text-white font-bold rounded-lg shadow-md hover:bg-green-700 active:scale-95 transition flex justify-center items-center gap-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
                 <i class="fas fa-save"></i> Update Product
             </button>
         </form>
